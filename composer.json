@@ -1,0 +1,23 @@
+{
+    "name": "salimmbise/otp-library",
+    "description": "A simple OTP library for PHP",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "SalimMbise\\OtpLibrary\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "authors": [
+        {
+            "name": "Salim Mbise",
+            "email": "salymdev@gmail.com"
+        }
+    ]
+}
