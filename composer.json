@@ -17,6 +17,7 @@
     "minimum-stability": "dev",
 
     "license": "MIT",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Salim Mbise",
