@@ -4,7 +4,7 @@
 ## How to Install the Package
 
 ```bash
-composer require composer require salimmbise/otp-library
+composer require salimmbise/otp-library
 ````
 
 ## How to Use it 
