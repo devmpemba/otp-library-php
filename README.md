@@ -7,7 +7,7 @@
 composer require salimmbise/otp-library
 ````
 
-## How to Use it 
+## How to Send OTP  
 At first make sure you run composer require and publish the Vendor,
 then import this package in order to use it. Below is example of how to use this library in Laravel Application:
 
@@ -35,5 +35,37 @@ Route::get('/send-otp', function () {
 });
 
 ```
+
+## How to Validate OTP
+```bash
+use SalimMbise\OtpLibrary\OtpMailer;
+
+Route::get('/validate-otp', function () {
+    try {
+        // Instantiate the OtpMailer class
+        $otpService = new OtpService();
+
+        $email = $request->input('example@email.com');
+        $otp = $request->input('340123');
+
+        $isValid = $this->otpService->verifyOtp($email, $otp);
+
+        if ($isValid) {
+            return response()->json(['message' => 'OTP verified successfully']);
+
+        } else {
+            
+            return response()->json(['message' => 'OTP verification failed'], 400);
+        }
+
+       
+    } catch (\Exception $e) {
+        return "Failed to send OTP email. Error: " . $e->getMessage();
+    }
+});
+
+```
+
+
 
 Happy Coding! 
