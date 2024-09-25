@@ -38,11 +38,11 @@ Route::get('/send-otp', function () {
 
 ## How to Validate OTP
 ```bash
-use SalimMbise\OtpLibrary\OtpMailer;
+use SalimMbise\OtpLibrary\OtpService;
 
 Route::get('/validate-otp', function () {
     try {
-        // Instantiate the OtpMailer class
+        // Instantiate the OtpService class
         $otpService = new OtpService();
 
         $email = $request->input('example@email.com');
@@ -54,7 +54,7 @@ Route::get('/validate-otp', function () {
             return response()->json(['message' => 'OTP verified successfully']);
 
         } else {
-            
+
             return response()->json(['message' => 'OTP verification failed'], 400);
         }
 
